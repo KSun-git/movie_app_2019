@@ -51,17 +51,34 @@ function App() {
 */
 
 class App extends React.Component{
+	constructor(prop){
+		super(prop);
+		console.log("constructor!");
+	};
+	
 	state={
 		count: 0
 	};
+
 	add = () => {
 		this.setState(current => ({count: current.count+1}));
 	};
+
 	minus = () => {
 		this.setState(current => ({count: current.count-1}));
 	};
+	
+	componentDidMount(){
+		console.log("componentDidMount!");
+	};
 
+	componentDidUpdate(){
+		console.log("componentDidUpdate!");
+	}
+	
+	
 	render(){
+		console.log("render function!");
 		return(
 			<div>
 				<h1>The number is: {this.state.count}</h1>
