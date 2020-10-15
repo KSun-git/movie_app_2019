@@ -2,6 +2,8 @@ import React from 'react';
 import { HashRouter, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import About from "./routes/About";
+import Navigation from "./components/Navigation";
+import "./App.css";
 
 /*
 const foodILike = [
@@ -96,8 +98,9 @@ class App extends React.Component{
 function App() {
   return (
     <HashRouter>
-      <Route path="/" exact={true} component={Home} />
-      <Route path="/about" component={About} />
+		  <Navigation />
+		  <Route path="/" exact={true} component={Home} />
+		  <Route path="/about" component={About} />
     </HashRouter>
   );
 }
